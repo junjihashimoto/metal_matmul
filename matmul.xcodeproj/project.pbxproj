@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D51F9D4F2CA7FBAB00D9DE3D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D51F9D4E2CA7FBAB00D9DE3D /* main.m */; };
+		D51F9D4F2CA7FBAB00D9DE3D /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = D51F9D4E2CA7FBAB00D9DE3D /* main.mm */; };
+		D51F9D572CA7FF9900D9DE3D /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D51F9D562CA7FF9900D9DE3D /* Metal.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +25,8 @@
 
 /* Begin PBXFileReference section */
 		D51F9D4B2CA7FBAB00D9DE3D /* matmul */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = matmul; sourceTree = BUILT_PRODUCTS_DIR; };
-		D51F9D4E2CA7FBAB00D9DE3D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D51F9D4E2CA7FBAB00D9DE3D /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
+		D51F9D562CA7FF9900D9DE3D /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D51F9D572CA7FF9900D9DE3D /* Metal.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +46,7 @@
 			children = (
 				D51F9D4D2CA7FBAB00D9DE3D /* matmul */,
 				D51F9D4C2CA7FBAB00D9DE3D /* Products */,
+				D51F9D552CA7FF9900D9DE3D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,9 +61,17 @@
 		D51F9D4D2CA7FBAB00D9DE3D /* matmul */ = {
 			isa = PBXGroup;
 			children = (
-				D51F9D4E2CA7FBAB00D9DE3D /* main.m */,
+				D51F9D4E2CA7FBAB00D9DE3D /* main.mm */,
 			);
 			path = matmul;
+			sourceTree = "<group>";
+		};
+		D51F9D552CA7FF9900D9DE3D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D51F9D562CA7FF9900D9DE3D /* Metal.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,7 +131,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D51F9D4F2CA7FBAB00D9DE3D /* main.m in Sources */,
+				D51F9D4F2CA7FBAB00D9DE3D /* main.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,6 +192,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 14.5;
+				METAL_CAPTURE_ENABLED = "";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -235,6 +248,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 14.5;
+				METAL_CAPTURE_ENABLED = "";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -245,6 +259,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				METAL_CAPTURE_ENABLED = 1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -253,6 +268,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				METAL_CAPTURE_ENABLED = 1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
